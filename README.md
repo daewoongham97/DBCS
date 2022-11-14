@@ -1,20 +1,18 @@
----
-output: github_document
----
----
-output: github_document
----
 
 # DBCS
-An R package for doing fun sequntial/anytime-valid inference in linear models.
 
-[https://arxiv.org/abs/2210.08639](https://arxiv.org/abs/2210.08639).
+An R package for doing fun sequntial/anytime-valid inference in linear
+models.
 
-All code was written and edited by Dae Woong Ham (daewoongham@g.harvard.edu)
+<https://arxiv.org/abs/2210.08639>.
+
+All code was written and edited by Dae Woong Ham
+(<daewoongham@g.harvard.edu>)
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/daewoongham97/DBCS) with:
+You can install the development version from
+[GitHub](https://github.com/daewoongham97/DBCS) with:
 
 ``` r
 # install.packages("devtools")
@@ -23,9 +21,10 @@ devtools::install_github("daewoongham97/DBCS")
 
 ## Example
 
-This is a basic example for constructing design-based confidence sequences following Example 1 in the above paper. 
+This is a basic example for constructing design-based confidence
+sequences following Example 1 in the above paper.
 
-```{r example}
+``` r
 library(DBCS)
 
 signup_sim = function(n, baseline = 0.15, trt_effect = -0.10, seed = 1) {
@@ -55,5 +54,3 @@ exact_CS = DB_CS(df, treatment, response, nonasymp = TRUE, M = 1)
 # Asymptotic
 asymp_CS = DB_CS(df, treatment, response)
 ```
-
-

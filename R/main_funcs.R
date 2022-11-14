@@ -42,7 +42,7 @@ DB_CS = function(data, treatment, response, PS = rep(0.5, nrow(data)), alpha = 0
   # checks
   if (!(treatment %in% colnames(data))) stop("treatment should be in data")
   if (!(response %in% colnames(data))) stop("response should be in data")
-  if (nonasymp & is.null(m)) stop("m is required if nonasymp is TRUE")
+  if (nonasymp & is.null(M)) stop("M is required if nonasymp is TRUE")
 
   # setup
   y = data[, response]
