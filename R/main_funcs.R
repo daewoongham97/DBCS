@@ -11,7 +11,7 @@ get_eta = function(t_star, alpha) {
 # main function to be exported
 #' Constructs design based confidence sequence
 #'
-#' This function takes a dataset with treatmet and response and returns the
+#' This function takes a dataset (input) with treatment and response and returns the
 #' sequential confidence interval for the running mean of the average treatment effect.
 #'
 #' @param data A dataframe containing treatment and response (W, Y)
