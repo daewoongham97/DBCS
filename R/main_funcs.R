@@ -84,7 +84,7 @@ DB_CS = function(data, treatment, response, PS = rep(0.5, nrow(data)), alpha = 0
   }
   lower = center - width
   upper = center + width
-  param = list(nonasymp = nonasymp, alpha = alpha, PS = PS, eta = eta)
+  param = list(nonasymp = nonasymp, alpha = alpha, PS = PS)
   l = list(lower = lower, upper = upper, center = center, param = param)
 
   return(l)
