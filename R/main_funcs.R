@@ -82,6 +82,8 @@ DB_CS = function(data, treatment, response, PS = rep(0.5, nrow(data)), alpha = 0
     center = cum_avg(tau_hat)
 
   }
+
+  # Returning l
   lower = center - width
   upper = center + width
   param = list(nonasymp = nonasymp, alpha = alpha, PS = PS)
