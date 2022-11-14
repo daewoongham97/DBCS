@@ -14,15 +14,24 @@ All code was written and edited by Dae Woong Ham
 You can install the development version from
 [GitHub](https://github.com/daewoongham97/DBCS) with:
 
-``` r
-# install.packages("devtools")
-devtools::install_github("daewoongham97/DBCS")
-```
-
 ## Example
 
 This is a basic example for constructing design-based confidence
 sequences following Example 1 in the above paper.
+
+``` r
+devtools::install_github("daewoongham97/DBCS")
+```
+
+    ## Downloading GitHub repo daewoongham97/DBCS@HEAD
+
+    ## 
+    ## * checking for file ‘/private/var/folders/t7/mgw35wp13yq5hzlx18v6qcyh0000gn/T/RtmpU1qR3e/remotes193b32650a34/daewoongham97-DBCS-9c7a5f8/DESCRIPTION’ ... OK
+    ## * preparing ‘DBCS’:
+    ## * checking DESCRIPTION meta-information ... OK
+    ## * checking for LF line-endings in source and make files and shell scripts
+    ## * checking for empty or unneeded directories
+    ## * building ‘DBCS_0.0.0.9000.tar.gz’
 
 ``` r
 library(DBCS)
