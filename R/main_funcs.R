@@ -45,7 +45,6 @@ DB_CS = function(data, treatment, response, PS = rep(0.5, nrow(data)), alpha = 0
                  t_opt = 10, proxy_outcomes = NULL, nonasymp = FALSE, M = NULL, comparison = c(0, 1)) {
   # checks
   if (!(treatment %in% colnames(data))) stop("treatment should be in data")
-  if (!(class(data[, treatment]) == "numeric")) stop("treatment should be numeric")
   if (!(response %in% colnames(data))) stop("response should be in data")
   if (nonasymp & is.null(M)) stop("M is required if nonasymp is TRUE")
   if (!(all(comparison %in%  unique(data[, treatment])))) stop("treatment does not match comparison")
