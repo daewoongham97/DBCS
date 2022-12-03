@@ -1,6 +1,6 @@
 # helper functions
 cum_avg = function(x) {
-  cumsum(x) / seq_along(x)
+  cumsum(x)/seq_along(x)
 }
 
 get_eta = function(t_star, alpha) {
