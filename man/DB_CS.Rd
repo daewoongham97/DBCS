@@ -13,13 +13,15 @@ DB_CS(
   t_opt = 10,
   proxy_outcomes = NULL,
   nonasymp = FALSE,
-  M = NULL
+  M = NULL,
+  comparison = c(0, 1)
 )
 }
 \arguments{
 \item{data}{A dataframe containing treatment and response (W, Y)}
 
-\item{treatment}{Character string specifying the column name of data that contains treatment}
+\item{treatment}{Character string specifying the column name of data that contains treatment
+Assume treatment to be numeric. E.g. (0,1) for binary.}
 
 \item{response}{Character string specifying the column name of data that contains response}
 
@@ -38,6 +40,10 @@ own proxy outcomes to reduce variance. Default is NULL (no proxy outcomes).}
 or a non-asymptotic confidence sequence (TRUE). Default is FALSE.}
 
 \item{M}{only supplied if nonasymp is TRUE. Hyperparameter corresponding to maximum response.}
+
+\item{comparison}{Optional vector of length 2 used for treatments with more than 2 groups.
+Example: comparison = c(0,1) obtains ATE of Y(1) - Y(0) and comparison = c(0, 2)
+obtains ATE of Y(2) - Y(0). Comparison must match the same value of supplied treatment}
 }
 \value{
 A list containing: \item{lower}{A vector containing the lower confidence sequence.}
@@ -47,7 +53,7 @@ A list containing: \item{lower}{A vector containing the lower confidence sequenc
 e.g., alpha, eta, etc.}
 }
 \description{
-This function takes a dataset with treatmet and response and returns the
+This function takes a dataset (input) with treatment and response and returns the
 sequential confidence interval for the running mean of the average treatment effect.
 }
 \references{
